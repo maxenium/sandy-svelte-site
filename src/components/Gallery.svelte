@@ -7,6 +7,10 @@
 	let currentIndex = 0;
 	let autoScrollInterval;
 	let selectedPiece = null;
+	let isZoomed = false;
+	let imgOriginX = 50;
+	let imgOriginY = 50;
+	let fullscreenImage;
 
 	const artPieces = [
 		{
@@ -93,11 +97,33 @@
 
 	function closeFullscreen() {
 		selectedPiece = null;
+		// reset zoom when closing
+		isZoomed = false;
+		imgOriginX = 50;
+		imgOriginY = 50;
 	}
 
 	function handleKeydown(e) {
 		if (e.key === 'Escape') {
 			closeFullscreen();
+		}
+	}
+
+	function toggleZoom(e) {
+		// prevent modal from closing when clicking the image (also use stopPropagation on the element)
+		e.stopPropagation && e.stopPropagation();
+		if (!fullscreenImage) return;
+
+		if (!isZoomed) {
+			const rect = fullscreenImage.getBoundingClientRect();
+			// compute origin as percentage so transform-origin focuses on clicked point
+			imgOriginX = ((e.clientX - rect.left) / rect.width) * 100;
+			imgOriginY = ((e.clientY - rect.top) / rect.height) * 100;
+			isZoomed = true;
+		} else {
+			isZoomed = false;
+			imgOriginX = 50;
+			imgOriginY = 50;
 		}
 	}
 
@@ -189,7 +215,14 @@
 		<button class="close-btn" on:click={closeFullscreen} aria-label="Close fullscreen">
 			✕
 		</button>
-		<img src={selectedPiece.image} alt={selectedPiece.title} class="fullscreen-image" />
+		<img
+			bind:this={fullscreenImage}
+			src={selectedPiece.image}
+			alt={selectedPiece.title}
+			class="fullscreen-image"
+			on:click|stopPropagation={toggleZoom}
+			style="transform-origin: {imgOriginX}% {imgOriginY}%; transform: scale({isZoomed ? 2 : 1}); transition: transform 0.35s ease; cursor: {isZoomed ? 'zoom-out' : 'zoom-in'}"
+		/>
 		<div class="fullscreen-info">
 			<h2>{selectedPiece.title}</h2>
 			<p class="artist">{selectedPiece.artist}</p>
@@ -403,7 +436,7 @@
 	.close-btn {
 		position: absolute;
 		top: 2rem;
-		right: 2rem;
+		right: 10%;
 		background: none;
 		border: none;
 		color: white;
@@ -496,22 +529,8 @@
 			margin-bottom: 0.8rem;
 		}
 
-		.scroll-btn {
-			width: 40px;
-			height: 40px;
-			font-size: 1rem;
-		}
-
 		.fullscreen-modal {
-			padding: 1rem;
-		}
-
-		.close-btn {
-			top: 1rem;
-			right: 1rem;
-			width: 40px;
-			height: 40px;
-			font-size: 1.5rem;
+			padding: 0rem;
 		}
 
 		.fullscreen-image {
