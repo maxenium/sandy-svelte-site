@@ -11,7 +11,7 @@
 	</div>
 
 	<div class="divider-line" />
-
+    <div style="height: 50vh; clear:both"></div>
 	<div class="scroll-indicator">
 		<span>Continue scrolling</span>
 		<div class="arrow">↓</div>

@@ -270,26 +270,16 @@
 		margin-bottom: 3rem;
 		min-height: 500px;
 
-		/* Custom scrollbar */
-		scrollbar-width: thin;
-		scrollbar-color: var(--accent-color) transparent;
+		/* Hide scrollbar indicator for gallery container (cross-browser)
+		   keeps scrolling functional but removes visible scrollbar thumb */
+		-ms-overflow-style: none; /* IE and Edge */
+		scrollbar-width: none; /* Firefox */
 	}
 
 	.gallery-container::-webkit-scrollbar {
-		height: 8px;
-	}
-
-	.gallery-container::-webkit-scrollbar-track {
+		height: 0px;
+		width: 0px;
 		background: transparent;
-	}
-
-	.gallery-container::-webkit-scrollbar-thumb {
-		background: var(--accent-color);
-		border-radius: 4px;
-	}
-
-	.gallery-container::-webkit-scrollbar-thumb:hover {
-		background: var(--primary-color);
 	}
 
 	.gallery-item {
