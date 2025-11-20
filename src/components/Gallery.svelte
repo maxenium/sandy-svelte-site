@@ -14,7 +14,7 @@
 			title: 'Geometric Forms',
 			artist: 'Sandra',
 			image:
-				'/gallery1.jpg',
+				'gallery1.jpg',
 			year: '2024'
 		},
 		{
@@ -22,7 +22,7 @@
 			title: 'Abstract Layers',
 			artist: 'Sandra',
 			image:
-				'/gallery2.jpg',
+				'gallery2.jpg',
 			year: '2024'
 		},
 		{
@@ -30,7 +30,7 @@
 			title: 'Minimal Composition',
 			artist: 'Sandra',
 			image:
-				'/gallery3.jpg',
+				'gallery3.jpg',
 			year: '2023'
 		},
 		{
@@ -38,7 +38,7 @@
 			title: 'Color Study',
 			artist: 'Sandra',
 			image:
-				'/gallery4.jpg',
+				'gallery4.jpg',
 			year: '2023'
 		},
 		{
@@ -46,7 +46,7 @@
 			title: 'Spatial Rhythm',
 			artist: 'Sandra',
 			image:
-				'/gallery1.jpg',
+				'gallery1.jpg',
 			year: '2022'
 		}
 	];

@@ -2,17 +2,17 @@
 	const backgrounds = [
 		{
 			id: 1,
-			image: '/art-bg1.jpg',
+			image: 'art-bg1.jpg',
 			title: 'Visual Journey'
 		},
 		{
 			id: 2,
-			image: '/art-bg2.jpg',
+			image: 'art-bg2.jpg',
 			title: 'Contemporary Expression'
 		},
 		{
 			id: 3,
-			image: '/art-bg3.jpg',
+			image: 'art-bg3.jpg',
 			title: 'Artistic Evolution'
 		}
 	];

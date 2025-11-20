@@ -7,7 +7,7 @@
 <section class="start-screen">
 	<div class="background-wrapper">
 		<img
-			src="/gallery3.jpg"
+			src="gallery3.jpg"
 			alt="Hero background"
 			class="hero-image"
 			style="transform: translateY({scrollY * 0.5}px)"
