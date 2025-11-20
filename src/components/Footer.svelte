@@ -134,7 +134,7 @@
 
 	@media (max-width: 640px) {
 		.footer {
-			padding: 3rem 1rem;
+			padding: 3rem 0rem;
 		}
 
 		.social-links {
