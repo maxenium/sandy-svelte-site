@@ -50,7 +50,7 @@
 			title: 'Spatial Rhythm',
 			artist: 'Sandra',
 			image:
-				'gallery1.jpg',
+				'gallery5.jpg',
 			year: '2022'
 		}
 	];
