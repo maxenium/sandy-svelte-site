@@ -10,29 +10,38 @@
 
 		<section>
 			<h2>Artist Information</h2>
-			<p>
-				<strong>Name:</strong> Sandra<br />
-				<strong>Email:</strong> contact@example.com<br />
-				<strong>Phone:</strong> +1 (555) 000-0000<br />
-				<strong>Address:</strong> Your Address Here<br />
-				City, State ZIP Code
-			</p>
+			<address class="artist-address">
+				<p><span class="label">Name:</span> Sandra Dischner</p>
+				<p><span class="label">Email:</span> <a href="mailto:sandra.dischner@outlook.com">sandra.dischner@outlook.com</a></p>
+				<p>
+					<span class="label">Address:</span>
+					<span class="address-lines">
+						Ackersegenweg 14<br />
+						93055 Regensburg<br />
+						Bavaria<br />
+						Germany
+					</span>
+				</p>
+			</address>
 		</section>
 
 		<section>
 			<h2>Website Information</h2>
 			<p>
-				<strong>Website:</strong> www.example.com<br />
-				<strong>Responsible for Content:</strong> Sandra<br />
+				<strong>Responsible for Content:</strong> Maximilian Dischner<br />
 			</p>
 		</section>
 
 		<section>
-			<h2>Liability for Contents</h2>
+			<h2>Online Dispute Resolution pursuant to Article 14 (1) ODR Regulation:</h2>
 			<p>
-				As a service provider, we are liable for our own content on these pages in accordance with
-				general legislation. However, service providers are not under a general obligation to monitor
-				transmitted or stored information or to investigate circumstances that point to illegal activity.
+				The European Commission provides a platform for online dispute resolution (ODR), which you can find at the following link: <a href="https://ec.europa.eu/consumers/odr"> https://ec.europa.eu/consumers/odr</a>.
+			</p>
+		</section>
+        <section>
+			<h2>Notice pursuant to § 36 of the German Consumer Dispute Resolution Act (VSBG):</h2>
+			<p>
+We are neither obliged nor willing to participate in dispute resolution proceedings before a consumer arbitration board.
 			</p>
 		</section>
 
@@ -100,6 +109,28 @@
 
 	strong {
 		font-weight: 600;
+	}
+
+	/* Artist address formatting */
+	.artist-address {
+		font-style: normal; /* avoid italic from default address styling */
+		margin: 0;
+	}
+
+	.artist-address .label {
+		display: inline-block;
+		width: 8.5rem;
+		font-weight: 600;
+		vertical-align: top;
+	}
+
+	.artist-address .address-lines {
+		display: inline-block;
+	}
+
+	.artist-address a {
+		color: var(--primary-color);
+		text-decoration: underline;
 	}
 
 	.back-button-container {
