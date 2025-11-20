@@ -68,33 +68,23 @@ img {
 	display: block;
 }
 
-/* Scrollbar Styling */
+/* Hide scrollbar indicator (cross-browser)
+   - Chrome, Safari, Opera: hide via ::-webkit-scrollbar width/height = 0
+   - Firefox: scrollbar-width: none
+   - IE/Edge (legacy): -ms-overflow-style: none
+*/
+
+/* Apply to the document and all elements by default */
+html, body, * {
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none; /* Firefox */
+}
+
+/* For WebKit-based browsers (Chrome, Safari, Opera) */
 ::-webkit-scrollbar {
-	width: 8px;
-	height: 8px;
-}
-
-::-webkit-scrollbar-track {
+	width: 0px;
+	height: 0px;
 	background: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-	background: #888888;
-	border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-	background: #000000;
-}
-
-/* Firefox Scrollbar */
-* {
-	scrollbar-width: thin;
-	scrollbar-color: #888888 transparent;
-}
-
-*:hover {
-	scrollbar-color: #000000 transparent;
 }
 
 /* Responsive Base Sizes */
