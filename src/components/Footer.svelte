@@ -53,12 +53,15 @@
 
 <style>
 	.footer {
+		box-sizing: border-box;
 		width: 100%;
-		padding: 4rem 2rem;
+		max-width: 100%;
+		padding: 4rem 0;
 		background: var(--secondary-color);
 		border-top: 1px solid var(--accent-color);
 		position: relative;
 		z-index: 20;
+		overflow-x: visible;
 	}
 
 	.footer-content {

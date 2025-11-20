@@ -115,7 +115,7 @@
 	@media (max-width: 640px) {
 		.visual-journey {
 			height: auto;
-			padding: 4rem 1rem;
+			padding: 4rem 0rem;
 		}
 
 		.journey-title {

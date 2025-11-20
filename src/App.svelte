@@ -52,11 +52,10 @@
 		</div>
 
 		<!-- Gallery is outside the snap container so it does not affect snap scrolling -->
-		<div class="gallery-container" style="width:100%;">
+		<div class="gallery-container">
 			<Gallery />
 		</div>
 
-		<br>
 		<Footer />
 	</div>
 {/if}
@@ -85,6 +84,10 @@
 		width: 100%;
 		height: 100%;
 		overflow-x: hidden;
+		/* Prefer vertical touch scrolling only to avoid horizontal panning on mobile */
+		touch-action: pan-y;
+		/* Prevent overscroll from causing horizontal navigation on some browsers */
+		overscroll-behavior-x: none;
 		scroll-behavior: smooth;
 		scroll-snap-type: y mandatory;
 	}
@@ -103,7 +106,30 @@
 	#app,
 	.app {
 		width: 100%;
+		/* Limit content width on large/ultrawide screens and center it */
+		max-width: 1400px;
+		margin-left: auto;
+		margin-right: auto;
+		align-items: center;
 		position: relative;
 		display: block;
+		box-sizing: border-box;
+	}
+
+	/* Prevent horizontal overflow inside snap/gallery containers */
+	.snap-container,
+	.gallery-container {
+		max-width: 100%;
+		overflow-x: hidden;
+	}
+
+	/* Ensure the scrollable snap container supports native touch scrolling
+	   (momentum) and receives vertical touch gestures. This keeps the
+	   `touch-action` intent while allowing the inner container to scroll. */
+	.snap-container {
+		/* allow vertical pan gestures specifically on the scroll container */
+		touch-action: pan-y;
+		/* smooth native scrolling on iOS/Safari */
+		-webkit-overflow-scrolling: touch;
 	}
 </style>
