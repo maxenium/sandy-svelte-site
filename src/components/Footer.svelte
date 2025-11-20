@@ -1,7 +1,7 @@
 <script>
 	// Update these with your actual contact information
 	const instagram = 'https://instagram.com'; // Replace with your Instagram URL
-	const email = 'contact@example.com'; // Replace with your email
+	const email = 'sandra.dischner@outlook.com'; // Replace with your email
 	const whatsapp = 'https://wa.me/1234567890'; // Replace with your WhatsApp number
 
 	// Social icons SVG
@@ -43,8 +43,8 @@
 			</a>
 		</div>
 		<p class="copyright">
-			© {new Date().getFullYear()} Sandra. All rights reserved.
-			<span class="separator">·</span>
+			© {new Date().getFullYear()} Sandra Dischner. All rights reserved.
+			<span class="separator"></span>
             <br>
 			<a href="#/impressum" class="impressum-link">Impressum</a>
 		</p>
