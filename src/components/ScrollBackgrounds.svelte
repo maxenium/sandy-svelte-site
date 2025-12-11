@@ -1,19 +1,21 @@
 <script>
+	import { t } from '../i18n.js';
+
 	const backgrounds = [
 		{
 			id: 1,
 			image: 'art-bg1.jpg',
-			title: 'Visual Journey'
+			titleKey: 'visualJourney'
 		},
 		{
 			id: 2,
 			image: 'art-bg2.jpg',
-			title: 'Contemporary Expression'
+			titleKey: 'contemporaryExpression'
 		},
 		{
 			id: 3,
 			image: 'art-bg3.jpg',
-			title: 'Artistic Evolution'
+			titleKey: 'artisticEvolution'
 		}
 	];
 </script>
@@ -21,10 +23,10 @@
 <div class="scroll-backgrounds-container">
 	{#each backgrounds as bg, idx (bg.id)}
 		<section class="scroll-background-section">
-			<img src={bg.image} alt={bg.title} class="background-image" />
+			<img src={bg.image} alt={$t(bg.titleKey)} class="background-image" />
 			<div class="overlay" />
 			<div class="content">
-				<h2>{bg.title}</h2>
+				<h2>{$t(bg.titleKey)}</h2>
 			</div>
 		</section>
 	{/each}

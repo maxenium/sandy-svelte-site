@@ -1,4 +1,6 @@
 <script>
+	import { t } from '../i18n.js';
+
 	// Update these with your actual contact information
 	const instagram = 'https://instagram.com'; // Replace with your Instagram URL
 	const email = 'sandra.dischner@outlook.com'; // Replace with your email
@@ -43,9 +45,9 @@
 			</a>
 		</div>
 		<p class="copyright">
-			© {new Date().getFullYear()} Sandra Dischner. All rights reserved.
+			© {new Date().getFullYear()} Sandra Dischner. {$t('all_rights')}
 			<span class="separator"></span>
-            <br>
+			<br>
 			<a href="#/impressum" class="impressum-link">Impressum</a>
 		</p>
 	</div>

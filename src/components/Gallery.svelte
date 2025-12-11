@@ -1,6 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
+	import { t } from '../i18n.js';
 
 	let galleryContainer;
 	let scrollPosition = 0;
@@ -145,8 +146,8 @@
 <section class="gallery">
 	<div class="gallery-header">
 		<div>
-			<h2>Featured Works</h2>
-			<p>A collection of contemporary pieces</p>
+			<h2>{$t('featuredWorks')}</h2>
+			<p>{$t('collectionDescription')}</p>
 		</div>
 		<!-- <div class="scroll-indicators">
 			<button

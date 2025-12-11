@@ -1,4 +1,5 @@
 <script>
+	import { t } from '../i18n.js';
 	function goBack() {
 		window.history.back();
 	}
@@ -6,10 +7,10 @@
 
 <div class="impressum-container">
 	<div class="impressum-content">
-		<h1>Impressum</h1>
+		<h1>{$t('impressum')}</h1>
 
 		<section>
-			<h2>Artist Information</h2>
+			<h2>{$t('artistInfo')}</h2>
 			<address class="artist-address">
 				<p><span class="label">Name:</span> Sandra Dischner</p>
 				<p><span class="label">Email:</span> <a href="mailto:sandra.dischner@outlook.com">sandra.dischner@outlook.com</a></p>
@@ -18,45 +19,42 @@
 					<span class="address-lines">
 						Ackersegenweg 14<br />
 						93055 Regensburg<br />
-						Bavaria<br />
-						Germany
+						{$t('stateBayern')}<br />
+						{$t('countryGermany')}<br />
 					</span>
 				</p>
 			</address>
 		</section>
 
 		<section>
-			<h2>Website Information</h2>
+			<h2>{$t('websiteInfo')}</h2>
 			<p>
-				<strong>Responsible for Content:</strong> Maximilian Dischner<br />
+				<strong>{$t('responsibleContent')}:</strong> Maximilian Dischner<br />
 			</p>
 		</section>
 
 		<section>
-			<h2>Online Dispute Resolution pursuant to Article 14 (1) ODR Regulation:</h2>
+			<h2>{$t('odrHeading')}:</h2>
 			<p>
-				The European Commission provides a platform for online dispute resolution (ODR), which you can find at the following link: <a href="https://ec.europa.eu/consumers/odr"> https://ec.europa.eu/consumers/odr</a>.
+				{$t('odrText')}: <a href="https://ec.europa.eu/consumers/odr"> https://ec.europa.eu/consumers/odr</a>.
 			</p>
 		</section>
         <section>
-			<h2>Notice pursuant to § 36 of the German Consumer Dispute Resolution Act (VSBG):</h2>
+			<h2>{$t('vsbgHeading')}:</h2>
 			<p>
-We are neither obliged nor willing to participate in dispute resolution proceedings before a consumer arbitration board.
+				{$t('vsbgText')}
 			</p>
 		</section>
 
 		<section>
-			<h2>Copyright</h2>
+			<h2>{$t('copyrightHeading')}</h2>
 			<p>
-				The content and works provided on this website are governed by the copyright laws of the
-				applicable jurisdiction. Any duplication, processing, distribution, or any form of utilization
-				beyond the scope of copyright law will require the prior written consent of the author or
-				rightsholder.
+				{$t('copyrightText')}
 			</p>
 		</section>
 
 		<div class="back-button-container">
-			<button class="back-button" on:click={goBack}>← Back</button>
+			<button class="back-button" on:click={goBack}>{$t('back')}</button>
 		</div>
 	</div>
 </div>

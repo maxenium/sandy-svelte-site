@@ -1,7 +1,6 @@
 <script>
-	export let scrollY = 0;
-
-	const artistName = 'SANDRA DISCHNER';
+  import { lang, t, setLang } from '../i18n.js';
+  export let scrollY = 0;
 </script>
 
 <section class="start-screen">
@@ -16,12 +15,18 @@
 	</div>
 
 	<div class="content" style="opacity: {Math.max(1 - scrollY / 400, 0)}">
-		<h1 class="artist-name">{artistName}</h1>
-		<p class="tagline">Contemporary Art & Design</p>
+		<h1 class="artist-name">{$t('artistName')}</h1>
+		<p class="tagline">{$t('tagline')}</p>
+	</div>
+
+	<div class="lang-switch" aria-hidden="false">
+		<button class:active={$lang === 'en'} on:click={() => setLang('en')}>ENG</button>
+		<span class="pipe">|</span>
+		<button class:active={$lang === 'de'} on:click={() => setLang('de')}>DE</button>
 	</div>
 
 	<div class="scroll-indicator">
-		<span>Scroll to explore</span>
+		<span>{$t('scrollIndicator')}</span>
 		<div class="arrow">↓</div>
 	</div>
 </section>
@@ -137,4 +142,38 @@
 			bottom: 1.5rem;
 		}
 	}
+
+
+/* Language switch */
+.lang-switch {
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	z-index: 30;
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	color: rgba(255,255,255,0.9);
+	font-weight: 600;
+	letter-spacing: 0.06em;
+}
+
+.lang-switch button {
+	background: transparent;
+	color: inherit;
+	border: none;
+	cursor: pointer;
+	padding: 0.15rem 0.35rem;
+	font-size: 0.85rem;
+	text-transform: uppercase;
+}
+
+.lang-switch button.active {
+	text-decoration: underline;
+}
+
+.lang-switch .pipe {
+	opacity: 0.6;
+	font-weight: 400;
+}
 </style>

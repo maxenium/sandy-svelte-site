@@ -1,19 +1,18 @@
 <script>
-	const title = 'FROM REGENSBURG';
-	const subtitle = 'WITH ♥ TO THE WORLD';
+	import { t } from '../i18n.js';
 </script>
 
 <section class="visual-journey">
 	<div class="blur-overlay" />
 	<div class="content">
-		<h2 class="journey-title">{title}</h2>
-		<p class="journey-subtitle">{subtitle}</p>
+		<h2 class="journey-title">{$t('fromRegensburg')}</h2>
+		<p class="journey-subtitle">{$t('withLoveToWorld')}</p>
 	</div>
 
 	<div class="divider-line" />
     <div style="height: 50vh; clear:both"></div>
 	<div class="scroll-indicator">
-		<span>Continue scrolling</span>
+		<span>{$t('continueScrolling')}</span>
 		<div class="arrow">↓</div>
 	</div>
 </section>
