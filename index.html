@@ -6,18 +6,56 @@
 
 	<title>Sandra Dischner - Contemporary Art & Design</title>
 
+	<!-- SEO: description, canonical -->
+	<meta name="description" content="Sandra Dischner — contemporary art & design. Browse artworks, exhibitions and visual journeys showcasing contemporary pieces and installations." />
+	<link rel="canonical" href="/">
+
 	<!-- Favicons & App manifest -->
 	<link rel="icon" href="/favicon.svg" type="image/svg+xml">
 	<link rel="icon" href="/favicon.ico" type="image/x-icon">
-	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="mask-icon" href="/favicon.svg" color="#000000">
 	<link rel="manifest" href="/site.webmanifest">
 	<meta name="theme-color" content="#ffffff">
+
+	<!-- Open Graph / Social -->
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Sandra Dischner - Contemporary Art & Design">
+	<meta property="og:description" content="Explore Sandra Dischner's contemporary artworks, exhibitions and visual journeys." />
+	<meta property="og:image" content="/gallery1.jpg">
+	<meta property="og:url" content="/">
+
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Sandra Dischner - Contemporary Art & Design">
+	<meta name="twitter:description" content="Explore Sandra Dischner's contemporary artworks, exhibitions and visual journeys.">
+	<meta name="twitter:image" content="/gallery1.jpg">
 
 	<link rel='stylesheet' href='global.css'>
 	<link rel='stylesheet' href='build/bundle.css'>
 
 	<script defer src='build/bundle.js'></script>
+
+	<!-- Structured data (helps Google craft a better search snippet) -->
+	<script type="application/ld+json">
+{
+	"@context": "https://schema.org",
+	"@graph": [
+		{
+			"@type": "WebSite",
+			"url": "/",
+			"name": "Sandra Dischner - Contemporary Art & Design",
+			"description": "Sandra Dischner — contemporary art & design. Browse artworks, exhibitions and visual journeys."
+		},
+		{
+			"@type": "WebPage",
+			"url": "/",
+			"name": "Sandra Dischner — Home",
+			"description": "Explore Sandra Dischner's contemporary artworks, exhibitions and visual journeys.",
+			"isPartOf": {"@id": "/"}
+		}
+	]
+}
+	</script>
 </head>
 
 <body>
